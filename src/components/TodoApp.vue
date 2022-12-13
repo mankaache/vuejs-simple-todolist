@@ -29,8 +29,9 @@
       </thead>
       <tbody>
         <tr v-for="(task, index) in tasks" :key="index">
-          <th scope="row">{{ task.name }}</th>
-          <td><span class="pointer" @click="setStatus(index)"><a class="text-primary" href="#">{{ task.status }}</a></span></td>
+          <th scope="row">
+            <span :class="{'finished': task.status === 'finished'}">{{ task.name }}</span></th>
+          <td class="size"><span class="pointer" @click="setStatus(index)"><a class="text-primary" href="#">{{ task.status }}</a></span></td>
           <td>
             <div class="text-center text-success" @click="editTask(index)">
               <span class="fa fa-pen"></span>
@@ -103,5 +104,11 @@ export default {
 <style scoped>
 .pointer{
     cursor: pointer;
+}
+.size{
+    width: 120px;
+}
+.finished{
+    text-decoration: line-through;
 }
 </style>
