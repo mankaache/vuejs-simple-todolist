@@ -1,5 +1,5 @@
 # vuejs-simple-todolist
-this project is about a simple todo list app done with Vuejs and Bootstrap. it has special functionalities to ADD,DELETE and EDIT tasks. 
+## this project is about a simple todo list app done with Vuejs and Bootstrap. it has special functionalities to ADD,DELETE and EDIT tasks. 
 
 ## Project setup
 ```
